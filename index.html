@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CTF Challenge</title>
+<style>
+body{
+font-family:Arial;
+background:black;
+color:lime;
+text-align:center;
+padding-top:100px;
+}
+input{
+padding:10px;
+font-size:16px;
+}
+button{
+padding:10px 20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Keyboard Pattern Challenge</h1>
+
+<p>Follow the keyboard path from top to bottom.</p>
+
+<input type="text" id="flag" placeholder="Enter the flag">
+<button onclick="checkFlag()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+
+function checkFlag(){
+
+var correct="flag{1qaz_keyboard_path}";
+var user=document.getElementById("flag").value;
+
+if(user==correct){
+document.getElementById("result").innerHTML="Correct Flag 🎉";
+}else{
+document.getElementById("result").innerHTML="Wrong Flag ❌";
+}
+
+}
+
+</script>
+
+</body>
+</html>
